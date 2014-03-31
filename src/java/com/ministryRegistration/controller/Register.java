@@ -38,9 +38,9 @@ public class Register extends HttpServlet {
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
         
-        String email = request.getParameter( "emailaddress" );
-        session.setAttribute( "emailAd", email );
-         
+//        String email = request.getParameter( "emailaddress" );
+//        session.setAttribute( "emailAd", email );
+//         
         InputStream inputStream = null; // input stream of the upload file
          
         // obtains the upload file part in this multipart request
@@ -66,9 +66,7 @@ public class Register extends HttpServlet {
             // constructs SQL statement
             String sql = "INSERT INTO contacts (first_name, last_name, photo) values (?, ?, ?)";
             PreparedStatement statement = conn.prepareStatement(sql);
-            statement.setString(1, firstName);
-            statement.setString(2, lastName);
-             
+            
             if (inputStream != null) {
                 // fetches input stream of the upload file for the blob column
                 statement.setBlob(3, inputStream);
