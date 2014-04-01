@@ -65,6 +65,7 @@ public final class Step3_jsp extends org.apache.jasper.runtime.HttpJspBase
    String mStatus = request.getParameter( "maritualStatus" );
    String noChild = request.getParameter( "noOfChildren" );
    String heir = request.getParameter( "heir" );
+   
    session.setAttribute( "maritualStatus", mStatus );
    session.setAttribute( "noOfChildren", noChild );
    session.setAttribute( "heir", heir );
@@ -72,7 +73,7 @@ public final class Step3_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("    \n");
       out.write("<div align=\"center\">\n");
-      out.write("    <form id=\"form1\" name=\"form1\" method=\"post\" action=\"/Register\">\n");
+      out.write("    <form id=\"form1\" name=\"form1\" method=\"post\" action=\"Register\">\n");
       out.write("  <table bgcolor=\"#cccccc\" border=\"0\" height=\"600\" width=\"667\">\n");
       out.write("    <tbody><tr bordercolor=\"#0066FF\">\n");
       out.write("      <td colspan=\"3\" bgcolor=\"#0099cc\"><div class=\"style2\" align=\"center\">Teacher Registration Step 3 of 3 </div></td>\n");
